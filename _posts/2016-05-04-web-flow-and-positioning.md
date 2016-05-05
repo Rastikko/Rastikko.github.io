@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Web flow and posititioning!"
-date:   2016-05-04 20:27:49 -0700
+title:  "Web flow and posititioning"
+date:   2016-05-04
 categories: html
 ---
 
@@ -14,3 +14,5 @@ W3C CSS 2.1 Specification
 Static, Relative, Absolute and Fixed.
 
 ## Calculating element position
+
+Relative to the viewport/document
