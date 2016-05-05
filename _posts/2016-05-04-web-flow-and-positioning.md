@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Web flow and posititioning"
+title:  "Web flow and positioning"
 date:   2016-05-04
 categories: html
 ---
