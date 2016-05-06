@@ -86,11 +86,17 @@
 .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
+    margin-top: -10px;
 }
 
 .post-link {
     display: block;
     font-size: 24px;
+}
+
+.post-description {
+    display: block;
+    font-size: 12px;
 }
 
 
@@ -103,7 +109,7 @@
 }
 
 .post-title {
-    font-size: 42px;
+    font-size: 34px;
     letter-spacing: -1px;
     line-height: 1;
 

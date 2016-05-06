@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Flow and Positioning"
+description: "Introduction of browser DOM elements flow and how the positioning works through CSS specifications"
 date:   2016-05-04
 categories: html
 ---
@@ -8,7 +9,8 @@ categories: html
 In this article we will introduce some of the mayor concepts of browser DOM elements Positioning and how
 the browser will render your html elements base on different style manipulations.
 
-## Normal flow
+
+### Normal flow
 
 Any element in the DOM structure will respect the normal flow by default. This flow could traditionally had 2 flavors,
 `block` or `inline`. You might set up the position of your element through the [display](https://developer.mozilla.org/en-US/docs/Web/CSS/display) property:
@@ -25,7 +27,7 @@ Alternative, in CSS3 there is a new [flexbox module](https://www.w3.org/TR/css-f
 
 To read more about the normal flow, you might find information in the [W3C CSS Specification Normal Flow](https://www.w3.org/TR/CSS22/visuren.html#normal-flow).
 
-## Positioning
+### Positioning
 
 In normal flow the default position of an element is `static`, meaning that is not positioned. You might use the position attribute to set up the position of an element:
 
