@@ -5,20 +5,13 @@
 
   <body>
 
-    <div class="wrapper page-header-container">
-      <a class="page-header" href="{{ site.baseurl }}/">
-        <h1 class="page-header-title">{{ site.title }}</h1>
-        <div class="page-header-slogan">Because frameworks are great...ish</div>
-      </a>
-    </div>
+    {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+    <div class="container">
+      {{ content }}
 
-    {% include footer.html %}
+      {% include footer.html %}
+    </div>
 
   </body>
 
