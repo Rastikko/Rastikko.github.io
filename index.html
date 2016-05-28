@@ -3,33 +3,12 @@ layout: default
 ---
 
 <div class="row">
-  <div class="col-sm-3 text-center" style="margin-top: 20px">
-
-    <div class="well">
-      <h3 style="margin-top: 0">Johan de Bruin</h3>
-      <img class="img-thumbnail img-circle text-center sidebar-johan-img" src="/img/johan.jpg" alt="Johan de Bruin Programmer">
-      <p>Software engineer passionate about front end development.</p>
-      <p>
-        During the last years I've being focus on javascript frameworks, and html5 specs.
-        I'm using this blog as a didactic oportunity to improve theese concepts.
-      </p>
-      <p>
-        <a href="#">Learn more</a>
-      </p>
-    </div>
-  </div>
-
-  <div class="col-sm-9 text-center">
-    <div class="panel panel-default" style="margin-top: 20px">
-      <div class="panel-heading">
-        <h3 class="panel-title">Posts</h3>
+  <div class="text-center">
+    <h2>Posts</h2>
+    {% for post in site.posts %}
+      <div>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </div>
-      {% for post in site.posts %}
-        <div class="panel-body">
-          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </div>
-      {% endfor %}
-    </div>
+    {% endfor %}
   </div>
-
 </div>
