@@ -6,49 +6,15 @@ date:   2016-05-04
 categories: html
 ---
 
-The flexbox is a [CSS3 module specification](https://www.w3.org/TR/css-flexbox-1/), meaning that it belong to the new specs for the web. This specification allow us to laying down complex applications and websites. But for us fully understand what this new spec is capable to do, we should step back, and try to trace the CSS 2.1 specifications about normal flow.
+The flexbox is a [CSS3 module specification](https://www.w3.org/TR/css-flexbox-1/), meaning that it belong to the new specs for the web. This specification allow us to laying down complex applications and websites. But for us fully understand what this new spec is capable to do, we should step back, and try to trace the CSS 2.1 specifications about normal flow, also we should mention how positioning works.
 
 ### Normal flow
 
-Any element in the DOM structure will respect the normal flow by default. This flow could traditionally had 2 flavors, `block` or `inline`. You might set up the position of your element through the [display](https://developer.mozilla.org/en-US/docs/Web/CSS/display) property:
+This explains how the positioning of elements will adjust against others. Base on [CSS 2.1](https://www.w3.org/TR/CSS21/visuren.html#normal-flow) specification:
 
-```css
-.my-selector {
-  display: block;
-  display: inline;
-}
-```
+> Boxes in the normal flow belong to a formatting context, which may be block or inline, but not both simultaneously. Block boxes participate in a block formatting context. Inline boxes participate in an inline formatting context.
 
-#Past
-The specifications of css2.1 defines normal flow as the
-
- - Block layout
- - Inline layout
- - Table layout
- - Positioned layout
- - Now: flex layout, design to laying complex applications and websites.
-
- ##TODO: add one example of each
- can be laid out in any flow direction (leftwards, rightwards, downwards, or even upwards!)
- can have their display order reversed or rearranged at the style layer (i.e., visual order can be independent of source and speech order)
- can be laid out linearly along a single (main) axis or wrapped into multiple lines along a secondary (cross) axis
- can “flex” their sizes to respond to the available space
- can be aligned with respect to their container or each other on the secondary (cross)
- can be dynamically collapsed or uncollapsed along the main axis while preserving the container’s cross size
-
-
-
-
-
-
-
-
-In this article we will introduce some of the mayor concepts of browser DOM elements Positioning and how
-the browser will render your html elements base on different style manipulations.
-
-Alternative, in CSS3 there is a new [flexbox module](https://www.w3.org/TR/css-flexbox-1/#flex-containers), flex layout allow us to to have a more controlled flow of the elements, allowing us to organize the flow of multiple elements in a more controlled way. [Check this guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) to know more about flexbox.
-
-To read more about the normal flow, you might find information in the [W3C CSS Specification Normal Flow](https://www.w3.org/TR/CSS22/visuren.html#normal-flow).
+You might set up the formatting context through the [display](https://developer.mozilla.org/en-US/docs/Web/CSS/display) CSS property. For example the values `block`, `list-item` and `table` would set up the block formatting (elements would be shown one over another), where the values `inline`, `inline-table` and `inline-block` would set up the inline formatting (elements would be shown one next to another).
 
 ### Positioning
 
@@ -81,5 +47,16 @@ For example a good strategy to position absolute but from a relative parent, it'
 ```
 
 Meaning that the offsetParent of `child-element` is `parent-container`. Last thing to note, even if relative position behaves like a static, it will allow you to define position attributes into the element.
+
+### Flexible box
+Alternative, in CSS3 there is a new [flexbox module](https://www.w3.org/TR/css-flexbox-1/#flex-containers), flex layout allow us to to have a more controlled flow of the elements, allowing us to organize the flow of multiple elements in a more controlled way. [Check this guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) to know more about flexbox.
+
+TODO: add one example of each
+ - can be laid out in any flow direction (leftwards, rightwards, downwards, or even upwards!)
+ - can have their display order reversed or rearranged at the style layer (i.e., visual order can be independent of source and speech order)
+ - can be laid out linearly along a single (main) axis or wrapped into multiple lines along a secondary (cross) axis
+ - can “flex” their sizes to respond to the available space
+ - can be aligned with respect to their container or each other on the secondary (cross)
+ - can be dynamically collapsed or uncollapsed along the main axis while preserving the container’s cross size
 
  - https://www.w3.org/TR/css-flexbox-1/
