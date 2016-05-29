@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How Flexible Box layout Module works"
+title:  "Flow and positioning in web"
 description: "Introduction of browser DOM elements flow and how the positioning works through CSS specifications"
 date:   2016-05-04
 categories: html
@@ -14,11 +14,24 @@ This explains how the positioning of elements will adjust against others. Base o
 
 > Boxes in the normal flow belong to a formatting context, which may be block or inline, but not both simultaneously. Block boxes participate in a block formatting context. Inline boxes participate in an inline formatting context.
 
-You might set up the formatting context through the [display](https://developer.mozilla.org/en-US/docs/Web/CSS/display) CSS property. For example the values `block`, `list-item` and `table` would set up the block formatting (elements would be shown one over another), where the values `inline`, `inline-table` and `inline-block` would set up the inline formatting (elements would be shown one next to another).
+{% include image.html url="/img/normal_flow.jpg" description="Normal flow graph" %}
+
+You might set up the formatting context through the [display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
+
+The block formatting context would be used if you set up the display value to `block`, `list-item` or `table`. The block formating is useful when you want to make sure that the element will flow one under the next flow, rewardless if it was inline or block.
+
+Where the inline formatting context would be set up with `inline`, `inline-table` and `inline-block`. The inline context will only flow next to another inline.
+
+```css
+.my-selector {
+  display: block;
+  display: inline;
+}
+```
 
 ### Positioning
 
-In normal flow the default position of an element is `static`, meaning that is not positioned. You might use the position attribute to set up the position of an element:
+In normal flow the default position of an element is `static`, meaning that is not positioned. You might use the [position property](https://developer.mozilla.org/en-US/docs/Web/CSS/position) to set up the position of an element:
 
 ```css
 .my-selector {

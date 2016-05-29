@@ -1,8 +1,47 @@
+// https://color.adobe.com/Saffron-umbrella-color-theme-1641683/
+// https://color.adobe.com/Das-Boot-color-theme-189112/
+
+$headers: #2F3540;
+$text: #666A73;
+$background: #F2EDE4;
+$aux1: #D9D1C7;
+$aux2: #8C8681;
+
+body {
+  background-color: $background;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', sans-serif;
+    color: $headers;
 }
+
 p, div {
-    font-family: 'Open Sans', sans-serif;
+  padding: 10px 0;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: $text;
+}
+
+pre {
+  font-size:16px;
+  background-color: darken($background, 2%);
+}
+
+blockquote {
+  border-left: 5px solid $text;
+}
+
+a {
+  color: darken( $aux1, 20% );
+  &:hover, &:active, &:focus {
+    color: $aux2;
+  }
+}
+
+code {
+  color: $aux2;
+  background-color: $aux1;
 }
 
 .sidebar-johan-img {
