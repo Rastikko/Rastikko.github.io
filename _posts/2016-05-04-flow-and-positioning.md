@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Flow and positioning in web"
+title:  "Flow, positioning and Flexible box explained"
 description: "Introduction of browser DOM elements flow and how the positioning works through CSS specifications"
 date:   2016-05-04
 categories: html
@@ -8,7 +8,7 @@ categories: html
 
 The flexbox is a [CSS3 module specification](https://www.w3.org/TR/css-flexbox-1/), meaning that it belong to the new specs for the web. This specification allow us to laying down complex applications and websites. But for us fully understand what this new spec is capable to do, we should step back, and try to trace the CSS 2.1 specifications about normal flow, also we should mention how positioning works.
 
-### Normal flow
+## Normal flow
 
 This explains how the positioning of elements will adjust against others. Base on [CSS 2.1](https://www.w3.org/TR/CSS21/visuren.html#normal-flow) specification:
 
@@ -29,9 +29,9 @@ Where the inline formatting context would be set up with `inline`, `inline-table
 }
 ```
 
-### Positioning
+## Positioning
 
-In normal flow the default position of an element is `static`, meaning that is not positioned. You might use the [position property](https://developer.mozilla.org/en-US/docs/Web/CSS/position) to set up the position of an element:
+In normal flow the default position of an element is `static`, meaning that is not positioned and respect the normal flow. You might use the [position property](https://developer.mozilla.org/en-US/docs/Web/CSS/position) to set up the position of an element:
 
 ```css
 .my-selector {
@@ -61,7 +61,7 @@ For example a good strategy to position absolute but from a relative parent, it'
 
 Meaning that the offsetParent of `child-element` is `parent-container`. Last thing to note, even if relative position behaves like a static, it will allow you to define position attributes into the element.
 
-### Flexible box
+## Flexible box
 Alternative, in CSS3 there is a new [flexbox module](https://www.w3.org/TR/css-flexbox-1/#flex-containers), flex layout allow us to to have a more controlled flow of the elements, allowing us to organize the flow of multiple elements in a more controlled way. [Check this guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) to know more about flexbox.
 
 TODO: add one example of each
