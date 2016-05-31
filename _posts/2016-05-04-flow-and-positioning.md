@@ -85,7 +85,8 @@ In the other side the properties for the **children** can be used to define the 
 ```css
 .children {
   order: 0;
-  flex-grow: 2;
+  flex-grow: 0;
   flex-shrink: 1;
+  flex-basis: auto;
 }
 ```
