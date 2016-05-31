@@ -31,7 +31,7 @@ Where the inline formatting context would be set up with `inline`, `inline-table
 
 ## Positioning
 
-In normal flow the default position of an element is `static`, meaning that is not positioned and respect the normal flow. You might use the [position property](https://developer.mozilla.org/en-US/docs/Web/CSS/position) to set up the position of an element:
+In normal flow the default position of an element is `static`, meaning that is not positioned and respect the normal flow. You might use the [position property](https://developer.mozilla.org/en-US/docs/Web/CSS/position) to get out from normal flow and be more flexible in your positioning:
 
 ```css
 .my-selector {
@@ -44,6 +44,8 @@ In normal flow the default position of an element is `static`, meaning that is n
 Once you define a position you might use the properties `top`, `left`, `right` and `left` to define where to put your element. Note that this position will be relative on the closer *offsetParent*
 
 > The offsetParent it's the closer parent element that have a position defined (static does not count), if none of this parents have a position, then the body will become the offsetParent.
+
+{% include image.html url="/img/positioning.jpg" description="Normal flow graph" %}
 
 For example a good strategy to position absolute but from a relative parent, it's the use of position `relative` into `absolute` of a parent/child relationship:
 
@@ -64,12 +66,26 @@ Meaning that the offsetParent of `child-element` is `parent-container`. Last thi
 ## Flexible box
 Alternative, in CSS3 there is a new [flexbox module](https://www.w3.org/TR/css-flexbox-1/#flex-containers), flex layout allow us to to have a more controlled flow of the elements, allowing us to organize the flow of multiple elements in a more controlled way. [Check this guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) to know more about flexbox.
 
-TODO: add one example of each
- - can be laid out in any flow direction (leftwards, rightwards, downwards, or even upwards!)
- - can have their display order reversed or rearranged at the style layer (i.e., visual order can be independent of source and speech order)
- - can be laid out linearly along a single (main) axis or wrapped into multiple lines along a secondary (cross) axis
- - can “flex” their sizes to respond to the available space
- - can be aligned with respect to their container or each other on the secondary (cross)
- - can be dynamically collapsed or uncollapsed along the main axis while preserving the container’s cross size
+Flexbox will allow us to align items around without completly breaking the normal flow of the elements (something that `float` would do).
 
- - https://www.w3.org/TR/css-flexbox-1/
+You need to differentiate properties applied to the **parent**, like for example it will define the direction of the flex, how the children's will wrap empty space, how to justify content or how align the items. Here an example of the css for a parent:
+
+```css
+.parent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-flow: flex-start;
+  justify-content: flex-start;
+}
+```
+
+In the other side the properties for the **children** can be used to define the order of the item, how much the element will grow/shirnk respect their siblings, the hability to override the parents align, etc.. Here is an example of the css for a children:
+
+```css
+.children {
+  order: 0;
+  flex-grow: 2;
+  flex-shrink: 1;
+}
+```
