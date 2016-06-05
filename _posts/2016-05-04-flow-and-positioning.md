@@ -14,20 +14,13 @@ This explains how the positioning of elements will adjust against others. Base o
 
 > Boxes in the normal flow belong to a formatting context, which may be block or inline, but not both simultaneously. Block boxes participate in a block formatting context. Inline boxes participate in an inline formatting context.
 
-{% include image.html url="/img/normal_flow.jpg" description="Normal flow graph" %}
-
 You might set up the formatting context through the [display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
 
 The block formatting context would be used if you set up the display value to `block`, `list-item` or `table`. The block formating is useful when you want to make sure that the element will flow one under the next flow, rewardless if it was inline or block.
 
-Where the inline formatting context would be set up with `inline`, `inline-table` and `inline-block`. The inline context will only flow next to another inline.
+Where the inline formatting context would be set up with `inline`, `inline-table` and `inline-block`. The inline context will only flow next to another inline. Note that with `inline-block` we will force the respect of width and height.
 
-```css
-.my-selector {
-  display: block;
-  display: inline;
-}
-```
+{% include code-pen.html id="wWaEpY" %}
 
 ## Positioning
 
@@ -45,7 +38,7 @@ Once you define a position you might use the properties `top`, `left`, `right` a
 
 > The offsetParent it's the closer parent element that have a position defined (static does not count), if none of this parents have a position, then the body will become the offsetParent.
 
-{% include image.html url="/img/positioning.jpg" description="Normal flow graph" %}
+{% include code-pen.html id="MewqXY" %}
 
 For example a good strategy to position absolute but from a relative parent, it's the use of position `relative` into `absolute` of a parent/child relationship:
 
@@ -64,9 +57,9 @@ For example a good strategy to position absolute but from a relative parent, it'
 Meaning that the offsetParent of `child-element` is `parent-container`. Last thing to note, even if relative position behaves like a static, it will allow you to define position attributes into the element.
 
 ## Flexible box
-Alternative, in CSS3 there is a new [flexbox module](https://www.w3.org/TR/css-flexbox-1/#flex-containers), flex layout allow us to to have a more controlled flow of the elements, allowing us to organize the flow of multiple elements in a more controlled way. [Check this guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) to know more about flexbox.
+Alternative, in CSS3 there is a new [flexbox module](https://www.w3.org/TR/css-flexbox-1/#flex-containers), flex layout allow us to have a more controlled flow of the elements, allowing us to organize the flow of multiple elements in a more controlled way. [Check this guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) to know more about flexbox.
 
-Flexbox will allow us to align items around without completly breaking the normal flow of the elements (something that `float` would do).
+Flexbox will allow us to align items around without completely breaking the normal flow of the elements (something that `float` would do).
 
 You need to differentiate properties applied to the **parent**, like for example it will define the direction of the flex, how the children's will wrap empty space, how to justify content or how align the items. Here an example of the css for a parent:
 
@@ -80,7 +73,7 @@ You need to differentiate properties applied to the **parent**, like for example
 }
 ```
 
-In the other side the properties for the **children** can be used to define the order of the item, how much the element will grow/shirnk respect their siblings, the hability to override the parents align, etc.. Here is an example of the css for a children:
+In the other side the properties for the **children** can be used to define the order of the item, how much the element will grow/shirnk respect their siblings, the ability to override the parents align, etc.. Here is an example of the css for a children:
 
 ```css
 .children {
@@ -90,3 +83,7 @@ In the other side the properties for the **children** can be used to define the 
   flex-basis: auto;
 }
 ```
+
+Here is an example of an ambitious layout:
+
+{% include code-pen.html id="KMpJjm" %}

@@ -2,13 +2,11 @@
 layout: default
 ---
 
-<div class="row">
-  <div class="text-center">
-    <h2>Posts</h2>
-    {% for post in site.posts %}
-      <div>
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </div>
-    {% endfor %}
-  </div>
+<div class="text-center">
+  <h1>Posts</h1>
+  {% for post in site.posts %}
+    <div>
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </div>
+  {% endfor %}
 </div>
