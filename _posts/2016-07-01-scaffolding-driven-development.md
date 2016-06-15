@@ -9,10 +9,12 @@ categories: html
 ## What scaffolding means
 
  - Definition
+ - Minimum viable code
+
+ ## Scaffold driven development
  - Scaffold across projects
-   - Minimum viable code
+   - Example math finantial formula, then an actual web project
    - Extensibility
-   - Example math formula, then an actual web project
    - Upgrade the scaffold
 
 ## How to scaffold using yeoman
