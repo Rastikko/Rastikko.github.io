@@ -34,6 +34,7 @@ blockquote {
 
 a {
   color: darken( $aux1, 20% );
+  font-weight: bold;
   &:hover, &:active, &:focus {
     color: $aux2;
   }
