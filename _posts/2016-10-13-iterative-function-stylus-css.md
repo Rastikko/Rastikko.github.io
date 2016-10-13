@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Iterate Through a function in css stylus"
+title:  "Iterate through a function in css stylus"
 description: "How to use stylus to loop through an array of values and assign theese to an element"
 date:   2016-10-13
 categories: css
