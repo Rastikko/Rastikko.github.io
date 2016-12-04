@@ -71,3 +71,42 @@ The size, isEmpty, get, set, iterator, and listIterator operations run in consta
     <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html#remove(int)">remove</a></td>
   </tr>
 </table>
+
+
+### Queue ADT
+
+### FIFO Queue
+
+You can implement it efficiently with a Linked List or Array List.
+
+<table class="table">
+  <tr>
+    <th class="span6">Signature</th>
+    <th class="span3">Cost</th>
+    <th class="span3">Implelementation</th>
+  </tr>
+  <tr>
+    <td><pre>boolean enqueue(E e)</pre></td>
+    <td>O(n)</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/Queue.html#add(E)">add</a></td>
+  </tr>
+  <tr>
+    <td><pre>E dequeue()</pre></td>
+    <td>O(1)</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/Queue.html#remove()">remove</a></td>
+  </tr>
+  <tr>
+    <td><pre>E peek()</pre></td>
+    <td>O(1)</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/Queue.html#peek()">peek</a></td>
+  </tr>
+  <tr>
+    <td><pre>int size()</pre></td>
+    <td>O(1)</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html#size()">remove</a></td>
+  </tr>
+</table>
+
+### LIFO Queue (Stack)
+
+### Priority Queue
