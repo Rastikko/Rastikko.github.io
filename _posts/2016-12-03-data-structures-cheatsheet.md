@@ -10,41 +10,64 @@ categories: html
 
 The [list abstract data structure](https://goo.gl/mhgkxI) is one of the basic data structures around. Allows you to dynamically insert and remove and access elements.
 
+### Linked List
+
 <table class="table">
   <tr>
-    <th class="span3">Signature</th>
-    <th class="span2">Cost</th>
-    <th class="span2">Java Implementation</th>
-    <th class="span5">Description</th>
+    <th class="span6">Signature</th>
+    <th class="span3">Cost</th>
+    <th class="span3">Implelementation</th>
   </tr>
   <tr>
     <td><pre>boolean add(E e)</pre></td>
     <td>O(1)</td>
     <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html#add(E)">add</a></td>
-    <td>Appends the specified element to the end of this list (optional operation)</td>
   </tr>
   <tr>
     <td><pre>E get(int index)</pre></td>
     <td>O(n)</td>
     <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html#get(int)">get</a></td>
-    <td>Returns the element at the specified position in this list.</td>
   </tr>
   <tr>
     <td><pre>E set(int index, E element)</pre></td>
     <td>O(n)</td>
-    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html#get(int)">TODO</a></td>
-    <td>Replaces the element at the specified position in this list with the specified element (optional operation).</td>
-  </tr>
-  <tr>
-    <td><pre>void add(int index, E element)</pre></td>
-    <td>O(n)</td>
-    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html#get(int)">TODO</a></td>
-    <td>Inserts the specified element at the specified position in this list (optional operation). Shifts the element currently at that position (if any) and any subsequent elements to the right (adds one to their indices).</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html#add(int,%20E)">add</a></td>
   </tr>
   <tr>
     <td><pre>E remove(int index)</pre></td>
     <td>O(n)</td>
-    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html#get(int)">TODO</a></td>
-    <td> Removes the element at the specified position in this list (optional operation). Shifts any subsequent elements to the left (subtracts one from their indices). Returns the element that was removed from the list.</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html#remove(int)">remove</a></td>
+  </tr>
+</table>
+
+### Array List
+
+The size, isEmpty, get, set, iterator, and listIterator operations run in constant time. The *add operation runs in amortized constant time*, that is, adding n elements requires O(n) time. All of the other operations run in linear time (roughly speaking). The constant factor is low compared to that for the LinkedList implementation.
+
+<table class="table">
+  <tr>
+    <th class="span6">Signature</th>
+    <th class="span3">Cost</th>
+    <th class="span3">Implelementation</th>
+  </tr>
+  <tr>
+    <td><pre>boolean add(E e)</pre></td>
+    <td>O(n)</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html#add(E)">add</a></td>
+  </tr>
+  <tr>
+    <td><pre>E get(int index)</pre></td>
+    <td>O(1)</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html#get(int)">get</a></td>
+  </tr>
+  <tr>
+    <td><pre>E set(int index, E element)</pre></td>
+    <td>O(1)</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html#add(int,%20E)">add</a></td>
+  </tr>
+  <tr>
+    <td><pre>E remove(int index)</pre></td>
+    <td>O(n)</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html#remove(int)">remove</a></td>
   </tr>
 </table>
