@@ -193,12 +193,46 @@ BST allows you to manage the data in a sorted fashion (They produce Sorted Sets 
   </tr>
 </table>
 
-### Hash table
+### Hash Table
 
-They can manage to get constant time on average for the operations in exchange of memory and performance hickup (due the rehashing). Depending on the eficiency of the hashing method, the operations can even cost up to O(n).
+This class offers constant time performance for the basic operations (add, remove, contains and size), assuming the hash function disperses the elements properly among the buckets. Iterating over this set requires time proportional to the sum of the HashSet instance's size (the number of elements) plus the "capacity" of the backing HashMap instance (the number of buckets). Thus, it's very important not to set the initial capacity too high (or the load factor too low) if iteration performance is important.
+
+<table class="table">
+  <tr>
+    <th class="span6">Signature</th>
+    <th class="span3">Cost</th>
+    <th class="span3">Implelementation</th>
+  </tr>
+  <tr>
+    <td><pre>boolean add(E e)</pre></td>
+    <td>O(1)</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html#add(E)">add</a></td>
+  </tr>
+  <tr>
+    <td><pre>boolean contains(E e)</pre></td>
+    <td>O(1)</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html#contains(java.lang.Object)">contains</a></td>
+  </tr>
+  <tr>
+    <td><pre>boolean remove(E e)</pre></td>
+    <td>O(1)</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html#remove(java.lang.Object)">remove</a></td>
+  </tr>
+  <tr>
+    <td><pre>traversal</pre></td>
+    <td>O(n)*</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html#iterator()">iterator</a></td>
+  </tr>
+</table>
 
 ## Graph ADT
 
+TODO
+
 ### Adjacency Matrix
 
+TODO
+
 ### Adjacency List
+
+TODO
