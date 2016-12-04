@@ -100,11 +100,6 @@ You can implement it efficiently with a Linked List or Array List.
     <td>O(1)</td>
     <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/Queue.html#peek()">peek</a></td>
   </tr>
-  <tr>
-    <td><pre>int size()</pre></td>
-    <td>O(1)</td>
-    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html#size()">size</a></td>
-  </tr>
 </table>
 
 ### LIFO Queue (Stack)
@@ -132,13 +127,78 @@ Can be implemented efficiently using an Array List or Linked List.
     <td>O(1)</td>
     <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/Stack.html#peek()">peek</a></td>
   </tr>
-  <tr>
-    <td><pre>int size()</pre></td>
-    <td>O(1)</td>
-    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html#size()">size</a></td>
-  </tr>
 </table>
 
 ### Dequeue
 
-### Priority Queue
+Is a double ended queue, elements can be added to the front or the back. Can be implemented efficiently in both doubly linked list and Array List (with the circular array list implementation).
+
+### Binary Heaps
+
+They help to implement [priority queues](https://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html) efficiently. The binary heap is a binary tree that needs to be completed. They contain a heap property, **Min Heap** where are the childrens have a priority less or equal than the parent or **Max heap** (viceversa).
+
+<table class="table">
+  <tr>
+    <th class="span6">Signature</th>
+    <th class="span3">Cost</th>
+    <th class="span3">Implelementation</th>
+  </tr>
+  <tr>
+    <td><pre>boolean add(E e)</pre></td>
+    <td>O(lg(n))</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html#add(E)">add</a></td>
+  </tr>
+  <tr>
+    <td><pre>E remove()</pre></td>
+    <td>O(lg(n))</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html#poll()">poll</a></td>
+  </tr>
+</table>
+
+## Set and Map ADT
+
+They both can reuse the same implementation (a map is a set with an extra value field). The main caracteristic is that the elements never duplicates.
+
+### Binary Search Tree
+
+Is important to note that this operations cost are only for self balance trees, like example [AVL](https://en.wikipedia.org/wiki/AVL_tree) or [Red-black](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree) trees. If they are regular trees, the operations can cost up to O(n).
+
+BST allows you to manage the data in a sorted fashion (They produce Sorted Sets and Maps).
+
+<table class="table">
+  <tr>
+    <th class="span6">Signature</th>
+    <th class="span3">Cost</th>
+    <th class="span3">Implelementation</th>
+  </tr>
+  <tr>
+    <td><pre>boolean add(E e)</pre></td>
+    <td>O(lg(n))</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/TreeSet.html#add(E)">add</a></td>
+  </tr>
+  <tr>
+    <td><pre>boolean contains(E e)</pre></td>
+    <td>O(lg(n))</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/TreeSet.html#contains(java.lang.Object)">contains</a></td>
+  </tr>
+  <tr>
+    <td><pre>boolean remove(E e)</pre></td>
+    <td>O(lg(n))</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/TreeSet.html#remove(java.lang.Object)">remove</a></td>
+  </tr>
+  <tr>
+    <td><pre>traversal</pre></td>
+    <td>O(n)</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/TreeSet.html#iterator()">iterator</a></td>
+  </tr>
+</table>
+
+### Hash table
+
+They can manage to get constant time on average for the operations in exchange of memory and performance hickup (due the rehashing). Depending on the eficiency of the hashing method, the operations can even cost up to O(n).
+
+## Graph ADT
+
+### Adjacency Matrix
+
+### Adjacency List
