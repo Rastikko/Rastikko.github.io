@@ -10,7 +10,7 @@ categories: html
 
 The [list abstract data structure](https://goo.gl/mhgkxI) is one of the basic data structures around. Allows you to dynamically insert and remove and access elements.
 
-#### Linked List
+### Linked List
 
 <table class="table">
   <tr>
@@ -40,7 +40,7 @@ The [list abstract data structure](https://goo.gl/mhgkxI) is one of the basic da
   </tr>
 </table>
 
-#### Array List
+### Array List
 
 The size, isEmpty, get, set, iterator, and listIterator operations run in constant time. The *add operation runs in amortized constant time*, that is, adding n elements requires O(n) time. All of the other operations run in linear time (roughly speaking). The constant factor is low compared to that for the LinkedList implementation.
 
@@ -75,7 +75,7 @@ The size, isEmpty, get, set, iterator, and listIterator operations run in consta
 
 ## Queue ADT
 
-#### FIFO Queue
+### FIFO Queue
 
 You can implement it efficiently with a Linked List or Array List.
 
@@ -107,7 +107,7 @@ You can implement it efficiently with a Linked List or Array List.
   </tr>
 </table>
 
-#### LIFO Queue (Stack)
+### LIFO Queue (Stack)
 
 Can be implemented efficiently using an Array List or Linked List.
 
@@ -139,4 +139,6 @@ Can be implemented efficiently using an Array List or Linked List.
   </tr>
 </table>
 
-#### Priority Queue
+### Dequeue
+
+### Priority Queue
