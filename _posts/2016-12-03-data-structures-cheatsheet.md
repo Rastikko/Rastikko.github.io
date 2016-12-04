@@ -10,7 +10,7 @@ categories: html
 
 The [list abstract data structure](https://goo.gl/mhgkxI) is one of the basic data structures around. Allows you to dynamically insert and remove and access elements.
 
-### Linked List
+#### Linked List
 
 <table class="table">
   <tr>
@@ -40,7 +40,7 @@ The [list abstract data structure](https://goo.gl/mhgkxI) is one of the basic da
   </tr>
 </table>
 
-### Array List
+#### Array List
 
 The size, isEmpty, get, set, iterator, and listIterator operations run in constant time. The *add operation runs in amortized constant time*, that is, adding n elements requires O(n) time. All of the other operations run in linear time (roughly speaking). The constant factor is low compared to that for the LinkedList implementation.
 
@@ -73,9 +73,9 @@ The size, isEmpty, get, set, iterator, and listIterator operations run in consta
 </table>
 
 
-### Queue ADT
+## Queue ADT
 
-### FIFO Queue
+#### FIFO Queue
 
 You can implement it efficiently with a Linked List or Array List.
 
@@ -87,7 +87,7 @@ You can implement it efficiently with a Linked List or Array List.
   </tr>
   <tr>
     <td><pre>boolean enqueue(E e)</pre></td>
-    <td>O(n)</td>
+    <td>O(1)</td>
     <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/Queue.html#add(E)">add</a></td>
   </tr>
   <tr>
@@ -103,10 +103,40 @@ You can implement it efficiently with a Linked List or Array List.
   <tr>
     <td><pre>int size()</pre></td>
     <td>O(1)</td>
-    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html#size()">remove</a></td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html#size()">size</a></td>
   </tr>
 </table>
 
-### LIFO Queue (Stack)
+#### LIFO Queue (Stack)
 
-### Priority Queue
+Can be implemented efficiently using an Array List or Linked List.
+
+<table class="table">
+  <tr>
+    <th class="span6">Signature</th>
+    <th class="span3">Cost</th>
+    <th class="span3">Implelementation</th>
+  </tr>
+  <tr>
+    <td><pre>boolean push(E e)</pre></td>
+    <td>O(1)</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/Stack.html#push(E)">push</a></td>
+  </tr>
+  <tr>
+    <td><pre>E dequeue()</pre></td>
+    <td>O(1)</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/Stack.html#pop()">pop</a></td>
+  </tr>
+  <tr>
+    <td><pre>E peek()</pre></td>
+    <td>O(1)</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/Stack.html#peek()">peek</a></td>
+  </tr>
+  <tr>
+    <td><pre>int size()</pre></td>
+    <td>O(1)</td>
+    <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html#size()">size</a></td>
+  </tr>
+</table>
+
+#### Priority Queue
