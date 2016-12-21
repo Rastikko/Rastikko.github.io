@@ -224,15 +224,3 @@ This class offers constant time performance for the basic operations (add, remov
     <td><a href="https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html#iterator()">iterator</a></td>
   </tr>
 </table>
-
-## Graph ADT
-
-TODO
-
-### Adjacency Matrix
-
-TODO
-
-### Adjacency List
-
-TODO
