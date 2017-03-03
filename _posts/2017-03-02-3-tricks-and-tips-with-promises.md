@@ -53,7 +53,7 @@ Promise.race([timeoutPromise, anotherPromise]).then( //...
 
 ## 3 Ensure an element is rendered through requestAnimationFrame
 
-Swizec Teller shows in his blog how we can use `requestAnimationFrame`, we can leverage this pattern through a Promise:
+[Swizec Teller](https://swizec.com/blog/how-to-properly-wait-for-dom-elements-to-show-up-in-modern-browsers/swizec/6663) shows in his blog how we can use `requestAnimationFrame`, we can leverage this pattern through a Promise:
 
 ```js
 function getElementRenderedPromise(domElement) {
