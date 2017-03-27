@@ -7,7 +7,7 @@ categories: js
 ---
 
 
-## 1 Wrap an XHR request in a promise
+## 1 Wrap a XHR request in a promise
 
 Sometimes can be handy to just leverage a promise instead of the callbacks that a json request might trigger. Here is a snnipet to dot that:
 
