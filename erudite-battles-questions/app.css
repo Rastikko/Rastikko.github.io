@@ -5459,7 +5459,7 @@ button.close {
   margin-bottom: 20px; }
 
 body {
-  background: url("/images/background.jpg") no-repeat;
+  background: url("http://frameworkish.com/erudite-battles-questions/images/background.jpg") no-repeat;
   background-position: 0 40px;
   background-size: cover;
   background-color: black; }
