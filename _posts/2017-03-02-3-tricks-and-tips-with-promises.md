@@ -6,6 +6,7 @@ date:   2017-03-02
 categories: js
 ---
 
+These are some small tricks I found usefull working as a web developer, they all involve the usage of [Promises](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise).
 
 ## 1 Wrap a XHR request in a promise
 

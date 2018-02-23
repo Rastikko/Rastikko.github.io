@@ -6,6 +6,8 @@ date:   2016-12-03
 categories: html
 ---
 
+Small cheatsheet of data structures and the associated cost.
+
 ## List ADT
 
 The [list abstract data structure](https://goo.gl/mhgkxI) is one of the basic data structures around. Allows you to dynamically insert and remove and access elements.
@@ -16,7 +18,7 @@ The [list abstract data structure](https://goo.gl/mhgkxI) is one of the basic da
   <tr>
     <th class="span6">Signature</th>
     <th class="span3">Cost</th>
-    <th class="span3">Implelementation</th>
+    <th class="span3">Implementation</th>
   </tr>
   <tr>
     <td><pre>boolean add(E e)</pre></td>

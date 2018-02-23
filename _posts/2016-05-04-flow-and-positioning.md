@@ -6,7 +6,9 @@ date:   2016-05-04
 categories: html
 ---
 
-The flexbox is a [CSS3 module specification](https://www.w3.org/TR/css-flexbox-1/), meaning that it belong to the new specs for the web. This specification allow us to laying down complex applications and websites. But for us fully understand what this new spec is capable to do, we should step back, and try to trace the CSS 2.1 specifications about normal flow, also we should mention how positioning works.
+The flexbox is a [CSS3 module specification](https://www.w3.org/TR/css-flexbox-1/), meaning that it belong to the new specs for the web.
+
+This specification allow us to laying down complex applications and websites. But for us fully understand what this new spec is capable to do, we should step back, and try to trace the CSS 2.1 specifications about normal flow, also we should mention how positioning works.
 
 ## Normal flow
 

@@ -2,11 +2,14 @@
 layout: default
 ---
 
-<div class="text-center">
+<div>
   <h1>Posts</h1>
   {% for post in site.posts %}
-    <div>
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </div>
+    <div style="padding: 5px">
+    <h4>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h4>
+      {{ post.excerpt }}
+  </div>
   {% endfor %}
 </div>
