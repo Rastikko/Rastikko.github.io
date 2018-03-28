@@ -18,6 +18,10 @@ categories: javascript
 
 ## Sinon spy a call arguments
 
+```js
+const spyCall = spy.withArgs('MY_FIRST_ARGUMENT');
+```
+
 ## Sinon stub a function
 
 ## Sinon stub a method
