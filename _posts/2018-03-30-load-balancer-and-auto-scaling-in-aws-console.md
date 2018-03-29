@@ -6,6 +6,8 @@ date:   2018-03-30
 categories: aws
 ---
 
+Commands to create a Load Balancer and autoscaling service in AWS Console. Useful to create quick scripts that spin up service.
+
 ### Create the security group
 
 ```sh
