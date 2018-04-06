@@ -69,4 +69,16 @@ const spyCall = spy.withArgs('MY_FIRST_ARGUMENT');
 
 ## Sinon stub a method
 
+```js
+sinon.stub(objectToStub, 'propertyInObjectToStub').returns({
+  propertyMethod: sinon.stub()
+});
+```
+
+Then remember after the test is done to restore the origiinal object.
+
+```js
+objectToStub.propertyInObjectToStub.restore();
+```
+
 ## Mocha handle promises
