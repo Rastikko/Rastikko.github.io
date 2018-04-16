@@ -32,7 +32,8 @@ describe('My feature test', function() {
     });
 });
 ```
-## Mocha it
+
+## Mocha only and skip
 You use it to perform a test, it allows `it.only` will ensure that only this test will executed, `it.skip` will skip the test.
 
 ```js
@@ -49,13 +50,37 @@ it.skip('this test is going to be skipped', function() {
 
 ## Mocha handle done callback
 
+```js
+it('mocha can done callback', function(done) {
+    testSubject.getPromiseMethod().then(function(data) {
+        expect(data).to.equal('Resolved!');
+        done();
+    });
+});
+```
 ## Mocha return a promise
 
-## Chai basic expect assertations
+```js
+it('mocha can handle returned promises', function() {
+    return testSubject.getPromiseMethod().then(function(data) {
+        expect(data).to.equal('Resolved!');
+    });
+});
+```
 
 ## Chai contains and handleling arrays
-
+```js
+    it('can check if it contains a method', function() {
+        expect(testSubject.getArray()).include(2);
+    });
+```
 ## Chai contains and handleling objects
+
+```js
+it('can check if it contains element in object', function() {
+    expect(testSubject.getObject()).include({one: 'a'});
+});
+```
 
 ## Sinon spy a call count
 
@@ -64,8 +89,6 @@ it.skip('this test is going to be skipped', function() {
 ```js
 const spyCall = spy.withArgs('MY_FIRST_ARGUMENT');
 ```
-
-## Sinon stub a function
 
 ## Sinon stub a method
 
@@ -81,4 +104,4 @@ Then remember after the test is done to restore the origiinal object.
 objectToStub.propertyInObjectToStub.restore();
 ```
 
-## Mocha handle promises
+## Sinon stub a method with different output per argument
