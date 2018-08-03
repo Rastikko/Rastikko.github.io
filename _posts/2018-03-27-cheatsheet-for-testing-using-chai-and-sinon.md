@@ -6,6 +6,8 @@ date:   2018-03-27
 categories: javascript
 ---
 
+This is a little cheatsheet with snnipets to create unit tests using Mocha test runner, Chai assertion library and Sinon (for spies and stubs).
+
 ## How to set them up with mocha
 To start to setup your tests you need to define a test suite using `describe`. These act like closures and you can even nest them.
 
@@ -105,3 +107,7 @@ objectToStub.propertyInObjectToStub.restore();
 ```
 
 ## Sinon stub a method with different output per argument
+
+## Sinon use sandbox feature
+
+
