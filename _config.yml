@@ -6,11 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Frameworkish - Web engineering blog
+title: Frameworkish - Web Engineering Blog
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  Web, javascript and HTML5 blog, articles about javasript frameworks and tools like
-  ember, react, yeoman, webpack, test, and much more.
+  Web Services, Javascript, Ember.js, Unit Tests, HTML5 and CSS articles by Johan de Bruin.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://frameworkish.com" # the base hostname & protocol for your site
 twitter_username: rastikko
