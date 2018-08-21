@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Cheatsheet to test using Chai and Sinon"
+title:  "Cheatsheet to test using Mocha, Chai and Sinon"
 description: "Quick cheatsheet with the different assertions and spies and stub snnippets for succesfully testing in javascript."
 date:   2018-03-27
 categories: javascript
