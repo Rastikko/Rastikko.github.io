@@ -86,10 +86,20 @@ it('can check if it contains element in object', function() {
 
 ## Sinon spy a call count
 
+```js
+cont numberOfCalls = spy.callCount;
+```
+
 ## Sinon spy a call arguments
 
 ```js
-const spyCall = spy.withArgs('MY_FIRST_ARGUMENT');
+const firstCallFirstArgumentValue = spy.args[0][0];
+```
+
+## Sinon spy called with arguments
+
+```js
+const booleanCalled = spy.withArgs('MY_FIRST_ARGUMENT').calledOnce;
 ```
 
 ## Sinon stub a method
