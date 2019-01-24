@@ -116,6 +116,14 @@ Then remember after the test is done to restore the origiinal object.
 objectToStub.propertyInObjectToStub.restore();
 ```
 
+## Sinon stub an object
+
+```js
+sinon.stub(objectToStub, 'propertyWeAreStubbing').value({
+  propertyMethod: sinon.stub()
+});
+```
+
 ## Sinon stub a method with different output per argument
 
 ## Sinon use sandbox feature
