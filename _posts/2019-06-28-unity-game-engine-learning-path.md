@@ -5,6 +5,7 @@ description: "Learn game development and design with this learning path"
 date:   2019-06-28
 categories: game
 ---
+Here is a small list of courses and resources to learn unity.
 
 ## Introductory Courses
  - [Coursera Programming Unity Game Development](https://www.coursera.org/specializations/programming-unity-game-development)
