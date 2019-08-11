@@ -10,6 +10,7 @@ Here is a small list of courses and resources to learn unity.
 ## Introductory Courses
  - [Coursera Programming Unity Game Development](https://www.coursera.org/specializations/programming-unity-game-development)
  - [Udemy Unity 2D](https://www.udemy.com/unitycourse/)
+ - [Unity Learn](https://learn.unity.com/courses)
  
 ## Expert Courses
  - [Coursera Gameplay](https://www.coursera.org/specializations/unity-gameplay-programmer)
