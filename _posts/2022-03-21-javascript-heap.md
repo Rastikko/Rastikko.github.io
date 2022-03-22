@@ -89,7 +89,6 @@ class Heap {
 	
 	insert(value)
 	{
-		console.log('INSERT === ', value);
 		this.length++;
 		this.heap.push(value);
 		
@@ -99,8 +98,6 @@ class Heap {
 			this.swap(i, this.parent(i));
 			i = this.parent(i);
 		}
-		console.log('heap', this.heap)
-		console.log('\n');
 	}
 	
 	swap(i, j)
