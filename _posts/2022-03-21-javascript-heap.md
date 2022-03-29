@@ -12,6 +12,17 @@ Here is an implementation of a data structure in javascript that allow us to def
 const maxHeap = new Heap(MAX_HEAP_COMPARATOR, []);
 const minHeap = new Heap(MIN_HEAP_COMPARATOR, []);
 ```
+Also if you want to sort an array using the class here is an example:
+
+```js
+function heapSort(array) {
+	const maxHeap = new Heap(MAX_HEAP_COMPARATOR, array);
+	const sortedArray = maxHeap.getSortedArray();
+	return sortedArray;
+}
+```
+
+Of course this is only for educational purposes, you should probably use (Array.prototype.sort())[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort] in production.
 
 Implementation
 
@@ -21,6 +32,17 @@ class Heap {
 	{
 		this.comparator = comparator;
 		this.buildHeap(array);
+	}
+	
+	getSortedArray()
+	{
+		for (let i = this.length - 1; i > 0; i--)
+		{
+			this.swap(0, i);
+			this.length--;
+			this.hepify(0);
+		}
+		return this.heap;
 	}
 	
 	left(i)
@@ -43,10 +65,10 @@ class Heap {
 	{
 		this.length = array.length;
 		this.heap = array;
-		const firstParentIndex = this.parent(array.length - 1);
-		for (let i = firstParentIndex; i > 0; i--)
+		const firstParentIndex = this.parent(array.length-1);
+		for (let i = firstParentIndex; i >= 0; i--)
 		{
-			hepify(i);
+			this.hepify(i);
 		}
 	}
 	
@@ -56,12 +78,12 @@ class Heap {
 		let right = this.right(index);
 		let indexToSwap = index;
 
-		if (left <= this.length && this.comparator(this.heap[left], this.heap[indexToSwap]))
+		if (left < this.length && this.comparator(this.heap[left], this.heap[indexToSwap]))
 		{
 			indexToSwap = left;
 		}
 
-		if (right <= this.length && this.comparator(this.heap[right], this.heap[indexToSwap]))
+		if (right < this.length && this.comparator(this.heap[right], this.heap[indexToSwap]))
 		{
 			indexToSwap = right;
 		}
